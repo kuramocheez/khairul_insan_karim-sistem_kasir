@@ -1,0 +1,6 @@
+PROGRAM sistem_kasir_sederhana
+
+READ AND WRITE "idTransaction" with number
+READ AND WRITE "dateOfTransaction" with date
+READ AND WRITE "trancsaction" with boolean true
+STORE "totalPaying" with 0
