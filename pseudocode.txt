@@ -5,17 +5,23 @@ CREATE OBJECT "item" with property:
     itemName string,
     price integer
 
-SET listItem with []item
-SET totalHarga = 0
+SET "listItem" with "[]item"
+SET "totalPayment" with 0
+READ AND WRITE "ammount" with integer
 
 WHILE range of item
-    totalHarga = item[price] * ammount
+    SET "totalPayment" with "item[price]" multiplied "ammount"
 END WHILE
 
 
-WHILE "trancsaction" == true
-    READ AND WRITE "price" with number
-    STORE "totalPayment" with totalPayment plus price
-    READ AND WRITE "trancsaction"
+READ AND WRITE "paid" with integer
 
-DISPLAY totalPayment
+IF "paid" smaller than "totalPayment"
+    DISPLAY 'the money paid is not enough'
+    END IF
+ELSE IF "paid" greater than or equal to "totalPayment"
+    SET "change" with "paid" minus "totalPayment"
+
+DISPLAY "totalPayment"
+DISPLAY "paid"
+DISPLAY "change"
