@@ -1,5 +1,7 @@
 PROGRAM sistem_kasir_sederhana
 
+This program is for calculating the total buying and calculating payments and change
+
 CREATE OBJECT "item" with property:
     itemId integer,
     itemName string,
